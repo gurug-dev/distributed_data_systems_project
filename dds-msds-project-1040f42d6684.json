@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dds-msds-project",
+  "private_key_id": "1040f42d66849f13731cfb570dd93f7882d615dd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCXXBHxhsWy3taA\n8XMbg1+udm3eRMUhImS1FpSNlGYFIImGk6iMXDkfnYuqgvr268jbRu/2RhNrwQXr\nQ6Id7A885jjygPMyqOc9w2P4WETUlllSOxDw8baFivIncB1zNOLyQ+1e2u1yETYo\nVIEJ8PLZDCSjVcLLq5gVpcQTxMyldREvoi6XQ2QGr0gJbJA79jBSB4jhwcrHsoXb\nKvK/Zohv2N2PRK1RmOsibjBAqEt6uAM6gWhaFYQUZBVwSjkbThpAU6oA/CmM7t4r\nuetooCbzbLdrVw4UqCy09MumkQLPHCbzGbaw+VF4yY+1iFgDtN/biQwM849Ikwn+\nSMdTBXUTAgMBAAECggEAFrtGnJnrhg4OdAYPDgJAc/CoVnnIi03hhwrRm6O+YKW+\n0b3KUe4lzBg6mgyayUum+jugnUFv+D5gd7FMHydNMI243r68B48zT2TRVkJXb//2\ngTGKvUzn5w1zibW+ToeST+UguJ6zi26HTi5GxOnxZuR6eidOnozyRcoD9R4Yx/5e\nRZ0M8ynAlpAvkLQHnDBVvSf/MnssDpaDuQZd7yPmL1QkX8UHfzt6HtLgKjmLM5MB\njFmzXi4vIITtUEzufnTdHqZS3utd9xZw9cjBRJ83mDdCuqfla5z5bdr/4os1AgxT\nUix+nb1n79qhQTz1ONqvkgvQ9XGziXtIpaAzcdVqeQKBgQDJ8Zl0TTQCjjcHHBf+\neuzu5K/YqeCRuB06S2PYeNhdyxI/jap0wcj4fz6q+aUtfS9jAeGqj53XGM+Pmk81\nACQFuscKHjq5IZcEu3o5brS8lP7IsbqdP470ZcvvoiZrBlJUdS/o+h+wMf1SjDEh\nevWTzP3jZiYfdUbob6ifID14KwKBgQC/4CTUWGzXA1QBfg7/lk3A/d890L3tQxFD\nGC7bMGLuGarwCwHmx9Z3kKC6WPQSjlmcOCzj2+5+KPqGJF4DnWX9zUkQXwYHk1kz\nXGkt47HZux5bf+R1oYYsXLm6GXtXfq2eQGEW3D0IxnORtZRFj0PbdHp14WXn6D1k\nrWl4S0/auQKBgQCCbAyldi7+74ZOizBb5FwdNYj0L1KgCf6mZYZIilOCz+IrNX0/\nBuCazONWXQD2zgDKuq5aD4LrJlT287vwCPU61hQyTq+yXSVBoyse6IbFvJyIVXCm\nmiPjZ9M8IscZG+4UKdMVbmUE0GRA6dXZP6ZXHG9ka9Z3PrDa8TJAAvxwHQKBgQCX\n0jNSEeWM/AUsaSJU+gjr+/T4ZILjiX3PKQNqTA77dzPaW9tVUCpS0Q1cZaY6SIh/\nI7PhV9SN3r7cBUqecZySBi0Z1xZeSCj8itJujQvczEJpA/kxWm1gDL6okiEWShX2\ncdpgzEM+/kfTs2lu4L1AmBmNzJtltE1frBcYJ/83gQKBgCutlr+Iuu6poI4JsTiF\nKu53Su38kFosRkLEwuiphoyNh+ta+WftXpIeCmDpHvDT1o+5WudYR+B9zl1GAhzc\nAEjYipXN6t8VrhQ2lADpddgdFKchlpsXU/wv1E13JNTR58R9dDtpY9ixzZcLIhPC\n218f3Ox67w5k4V3Nq6MmWJEE\n-----END PRIVATE KEY-----\n",
+  "client_email": "dds-project-service-account@dds-msds-project.iam.gserviceaccount.com",
+  "client_id": "114976416252265896699",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dds-project-service-account%40dds-msds-project.iam.gserviceaccount.com"
+}

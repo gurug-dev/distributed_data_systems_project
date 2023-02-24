@@ -1,3 +1,5 @@
+.ipynb_checkpoints/*
+.DS_STORE
 __pycache__/*
 sf_law_enforcement_calls.py
 weather_data_calls.py

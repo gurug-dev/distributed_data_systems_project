@@ -4,13 +4,14 @@ import os
 
 
 #TODO:
-financial_folder = ''
+financial_folder = 'SEC_FILINGS'
 email="mkarri@usfca.edu"
 website="https://www.usfca.edu/"
 headers = { "User-Agent": f"{website} {email}"}
-financial_file_name = ""
+financial_file_name = "Russell_3000_Companies_Filings"
 bucket_name = os.environ.get("GS_BUCKET_NAME")
-service_account_key_file = os.environ.get("GS_SERVICE_ACCOUNT_KEY_FILE")
+# service_account_key_file = os.environ.get("GS_SERVICE_ACCOUNT_KEY_FILE")
+service_account_key_file = '/Users/gurug/USF/airflow_test/dds-msds-project-1040f42d6684.json'
 
 mongo_username = os.environ.get("MONGO_USERNAME")
 mongo_password =  os.environ.get("MONGO_PASSWORD")
