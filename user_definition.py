@@ -21,6 +21,17 @@ collection_name = os.environ.get("MONGO_COLLECTION_NAME")
 
 folder_name = date.today()
 
+# variables associated with reddit call
+yesterday = datetime.today() - timedelta(days=1)
+client_secret = 'klhppqo7oLptclnKbyYxcf5ZaSWnYQ'
+client_id = 'NshKC-eP4HnQuF_wNzQNGA'
+user_agent='Stocks'
+list_of_reddits = ['wallstreetbets','stocks','pennystocks','DueDiligence','smallstreetbets','shroomstocks','traders',\
+                   'SPACs','ValueInvesting','UndervaluedStonks','investing','SecurityAnalysis',\
+                   'Wallstreetbetsnew','UnderValuedStocks','EducatedInvesting','RichTogether',\
+                   'greeninvestor','stonks','investing_discussion','options','StockMarket','InvestmentClub',\
+                   'RobinHood']
+
 # # two_days_ago = date.today() - timedelta(days=4)
 # # three_days_ago = date.today() - timedelta(days=5) 
 # two_days_ago = '2023-01-26'
