@@ -21,9 +21,10 @@ def _download_reddit_data():
     """wrapper function for all the steps
     for testing only
     """
+    yesterday_str = yesterday.strftime("%Y-%m-%d")
     for subreddit in list_of_reddits:
-        blob_name = f'{folder_name}/{subreddit}.csv'
-        df = retrive_7days_reddit_posts(subreddit, folder_name)
+        blob_name = f'{yesterday_str}/{subreddit}.csv'
+        df = retrive_7days_reddit_posts(subreddit, yesterday)
         write_reddit_data_gcb(bucket_name, blob_name, service_account_key_file, df)
     
 
