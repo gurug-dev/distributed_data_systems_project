@@ -8,15 +8,20 @@ from user_definition import *
 
 
 def retreive_company_filings_data(spark, bucket_name, date):
-    yesterday_str = yesterday.strftime("%Y-%m-%d")
-    print(f"gs://{bucket_name}/{yesterday_str}/{financial_file_name}.csv")
     company_filings = (
         spark.read.format("csv")
         .option("header", True)
-        .load(f"gs://{bucket_name}/{yesterday_str}/{financial_file_name}.csv") #TODO modify file_name
+        .load(f"gs://{bucket_name}/{date}/{financial_file_name}.csv") #TODO modify file_name
     )
     return company_filings
 
+def retreive_reddit_data(spark, bucket_name, date):
+    reddit_data = (
+        spark.read.format("csv")
+        .option("header", True)
+        .load(f"gs://{bucket_name}/{date}/reddit.csv") #TODO modify file_name
+    )
+    return reddit_data
 
 def return_json(service_account_key_file,
                 bucket_name,
@@ -40,26 +45,42 @@ def add_json_data_to_rdd(rdd, json_data, json_field_name):
 def insert_aggregates_to_mongo():
     spark = SparkSession.builder.getOrCreate()
     conf = spark.sparkContext._jsc.hadoopConfiguration()
-#     conf.set("spark.jars", jar_path)
     conf.set("google.cloud.auth.service.account.json.keyfile", service_account_key_file)
     conf.set("fs.gs.impl", "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem")
     conf.set("fs.AbstractFileSystem.gs.impl", "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem")
 
     company_filings_df = retreive_company_filings_data(spark,
                                                        bucket_name,
-                                                       folder_name)
+                                                       date)
 
     aggregates = company_filings_df
 
-#     mongodb = MongoDBCollection(mongo_username,
-#                                 mongo_password,
-#                                 mongo_ip_address,
-#                                 database_name,
-#                                 collection_name)
-
+    mongodb = MongoDBCollection(mongo_username,
+                                mongo_password,
+                                mongo_ip_address,
+                                database_name,
+                                collection_name_finance)
+    
     for aggregate in aggregates.collect():
         print(aggregate)
-#         mongodb.insert_one(aggregate)
+        mongodb.insert_one(aggregate)
+
+    # reddit
+    reddit_df = retreive_company_filings_data(spark,
+                                              bucket_name,
+                                              date)
+
+    aggregates_reddit = reddit_df
+
+    mongodb_reddit = MongoDBCollection(mongo_username,
+                                       mongo_password,
+                                       mongo_ip_address,
+                                       database_name,
+                                       collection_name_reddit)
+
+    for aggregate in aggregates_reddit.collect():
+        print(aggregate)
+        mongodb_reddit.insert_one(aggregate)
 
 if __name__=="__main__":
     insert_aggregates_to_mongo()

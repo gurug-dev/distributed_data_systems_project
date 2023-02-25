@@ -36,10 +36,13 @@ def _download_reddit_data():
     for testing only
     """
     yesterday_str = yesterday.strftime("%Y-%m-%d")
+    df_list = []
     for subreddit in list_of_reddits:
-        blob_name = f'{yesterday_str}/{subreddit}.csv'
         df = retrive_7days_reddit_posts(subreddit, yesterday)
-        write_reddit_data_gcb(bucket_name, blob_name, service_account_key_file, df)
+        df_list.append(df)
+    df_final = pd.concat(df_list, ignore_index=True)
+    blob_name = f'{yesterday_str}/reddit.csv'
+    write_reddit_data_gcb(bucket_name, blob_name, service_account_key_file, df_final)
     
 
 with DAG(
