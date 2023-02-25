@@ -25,7 +25,8 @@ def _clear_temp_folders():
         rm_r(path)
         
 def _download_financial_filings_data():
-    blob_name = f'{folder_name}/{financial_file_name}.csv'
+    yesterday_str = yesterday.strftime("%Y-%m-%d")
+    blob_name = f'{yesterday_str}/{financial_file_name}.csv'
     df = scrape_and_return_financials_df()
     write_csv_to_gcs(bucket_name, blob_name, service_account_key_file, df)
 
@@ -43,10 +44,9 @@ def _download_reddit_data():
 
 with DAG(
     dag_id="msds697-task2",
-    schedule=None,
     start_date=datetime(2023, 1, 1),
     catchup=False,
-    schedule_interval='@daily' # reddit data is planned to be called weekly, change function schedule?
+    schedule_interval='@weekly' # reddit data is planned to be called weekly
 ) as dag:
 
     create_insert_aggregate = SparkSubmitOperator(
@@ -74,4 +74,5 @@ with DAG(
     download_reddit_data = PythonOperator(task_id = "download_reddit_data",
                                                     python_callable = _download_reddit_data,
                                                     dag=dag)
-    clear_tmp_folders>> [download_financial_filing_data, download_reddit_data] >> create_insert_aggregate
+    clear_tmp_folders>> [download_reddit_data, download_financial_filing_data] >> create_insert_aggregate
+    download_reddit_data

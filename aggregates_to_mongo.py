@@ -8,11 +8,12 @@ from user_definition import *
 
 
 def retreive_company_filings_data(spark, bucket_name, date):
-    print(f"gs://{bucket_name}/{date}/{financial_file_name}.csv")
+    yesterday_str = yesterday.strftime("%Y-%m-%d")
+    print(f"gs://{bucket_name}/{yesterday_str}/{financial_file_name}.csv")
     company_filings = (
         spark.read.format("csv")
         .option("header", True)
-        .load(f"gs://{bucket_name}/{date}/{financial_file_name}.csv") #TODO modify file_name
+        .load(f"gs://{bucket_name}/{yesterday_str}/{financial_file_name}.csv") #TODO modify file_name
     )
     return company_filings
 
