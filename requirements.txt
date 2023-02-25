@@ -9,3 +9,4 @@ tqdm==4.42.1
 pathos==0.2.9
 urllib3==1.26.7
 tqdm==4.64.1
+pmaw==3.0.0
