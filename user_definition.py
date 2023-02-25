@@ -17,10 +17,16 @@ paths_to_clear = ["./datasets/INDICES","./datasets/RAW_FILINGS","./datasets/FILI
 mongo_username = os.environ.get("MONGO_USERNAME")
 mongo_password =  os.environ.get("MONGO_PASSWORD")
 mongo_ip_address = os.environ.get("MONGO_IP")
+# mongo_ip_address = 'localhost'
+
 database_name = os.environ.get("MONGO_DB_NAME")
 collection_name_finance = "financial"
 collection_name_reddit = "reddit"
 
+REF_STRING = "mongodb+srv://admin:<password>@msds697-cluster.qzgwq.mongodb.net/"
+MONGO_DB_NAME = "msds697_project"
+        
+        
 # folder_name = str(date.today())
 
 # variables associated with reddit call

@@ -53,7 +53,7 @@ def insert_aggregates_to_mongo():
                                                        bucket_name,
                                                        yesterday_str)
 
-    aggregates = company_filings_df
+    aggregates = company_filings_df.rdd.map(lambda x: x.asDict())
 
     mongodb = MongoDBCollection(mongo_username,
                                 mongo_password,
@@ -70,7 +70,7 @@ def insert_aggregates_to_mongo():
                                      bucket_name,
                                      yesterday_str)
 
-    aggregates_reddit = reddit_df
+    aggregates_reddit = reddit_df.rdd.map(lambda x: x.asDict())
 
     mongodb_reddit = MongoDBCollection(mongo_username,
                                        mongo_password,
