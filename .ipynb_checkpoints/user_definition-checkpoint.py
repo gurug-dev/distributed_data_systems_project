@@ -18,9 +18,10 @@ mongo_username = os.environ.get("MONGO_USERNAME")
 mongo_password =  os.environ.get("MONGO_PASSWORD")
 mongo_ip_address = os.environ.get("MONGO_IP")
 database_name = os.environ.get("MONGO_DB_NAME")
-collection_name = os.environ.get("MONGO_COLLECTION_NAME")
+collection_name_finance = "financial"
+collection_name_reddit = "reddit"
 
-folder_name = str(date.today())
+# folder_name = str(date.today())
 
 # variables associated with reddit call
 yesterday = datetime.today() - timedelta(days=1)
@@ -32,6 +33,8 @@ list_of_reddits = ['wallstreetbets','stocks','pennystocks','DueDiligence','small
                    'Wallstreetbetsnew','UnderValuedStocks','EducatedInvesting','RichTogether',\
                    'greeninvestor','stonks','investing_discussion','options','StockMarket','InvestmentClub',\
                    'RobinHood']
+
+# list_of_reddits = ['shroomstocks']
 
 # # two_days_ago = date.today() - timedelta(days=4)
 # # three_days_ago = date.today() - timedelta(days=5) 

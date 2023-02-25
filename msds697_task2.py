@@ -78,4 +78,5 @@ with DAG(
                                                     python_callable = _download_reddit_data,
                                                     dag=dag)
     clear_tmp_folders>> [download_reddit_data, download_financial_filing_data] >> create_insert_aggregate
-    download_reddit_data
+#     download_reddit_data
+#     create_insert_aggregate

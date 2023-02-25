@@ -18,12 +18,14 @@ mongo_username = os.environ.get("MONGO_USERNAME")
 mongo_password =  os.environ.get("MONGO_PASSWORD")
 mongo_ip_address = os.environ.get("MONGO_IP")
 database_name = os.environ.get("MONGO_DB_NAME")
-collection_name = os.environ.get("MONGO_COLLECTION_NAME")
+collection_name_finance = "financial"
+collection_name_reddit = "reddit"
 
 # folder_name = str(date.today())
 
 # variables associated with reddit call
 yesterday = datetime.today() - timedelta(days=1)
+yesterday_str = yesterday.strftime("%Y-%m-%d")
 client_secret = 'klhppqo7oLptclnKbyYxcf5ZaSWnYQ'
 client_id = 'NshKC-eP4HnQuF_wNzQNGA'
 user_agent='Stocks'

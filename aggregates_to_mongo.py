@@ -51,7 +51,7 @@ def insert_aggregates_to_mongo():
 
     company_filings_df = retreive_company_filings_data(spark,
                                                        bucket_name,
-                                                       date)
+                                                       yesterday_str)
 
     aggregates = company_filings_df
 
@@ -66,9 +66,9 @@ def insert_aggregates_to_mongo():
         mongodb.insert_one(aggregate)
 
     # reddit
-    reddit_df = retreive_company_filings_data(spark,
-                                              bucket_name,
-                                              date)
+    reddit_df = retreive_reddit_data(spark,
+                                     bucket_name,
+                                     yesterday_str)
 
     aggregates_reddit = reddit_df
 
@@ -81,6 +81,7 @@ def insert_aggregates_to_mongo():
     for aggregate in aggregates_reddit.collect():
         print(aggregate)
         mongodb_reddit.insert_one(aggregate)
+
 
 if __name__=="__main__":
     insert_aggregates_to_mongo()
