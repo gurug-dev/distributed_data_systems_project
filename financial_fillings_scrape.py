@@ -39,7 +39,7 @@ def create_config_json():
 
         dict1 = json.loads(f.read())
 #     dict1['edgar_crawler']['cik_tickers'] = list(rusell_ciks)
-    dict1['edgar_crawler']['cik_tickers'] = list(rusell_ciks)[:50] #LOCAL_TEST
+    dict1['edgar_crawler']['cik_tickers'] = list(rusell_ciks)[:10] #LOCAL_TEST
     
     # with open('edgar-crawler/config.json','w') as outfile:
     with open('config.json','w') as outfile:

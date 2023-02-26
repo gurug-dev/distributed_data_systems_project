@@ -38,5 +38,5 @@ user_agent='Stocks'
 #                    'greeninvestor','stonks','investing_discussion','options','StockMarket','InvestmentClub',\
 #                    'RobinHood']
 
-list_of_reddits = ['wallstreetbets','stocks','pennystocks','investing'] #TEST
+list_of_reddits = ['wallstreetbets'] #TEST
 
