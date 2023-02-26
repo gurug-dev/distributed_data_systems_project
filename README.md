@@ -1,7 +1,7 @@
 # Sentiment Analysis and Stock Price Prediction using Knowledge Graphs
 This is a group project part of which goes on towards satisfying requirements for course project in the Distributed Data Systems course, MSDS 697, as part of the University of San Francisco, MSDS Program. 
 
-Please note that this is a private repository as of now and access to this repo is limited to the group members and the course instructor/grader. 
+Please note that this is a private repository as of now and access to this repo is limited to the group members and the course instructor and grader. 
 
 ## Team Members
 - Devendra Govil
