@@ -32,11 +32,11 @@ yesterday_str = yesterday.strftime("%Y-%m-%d")
 client_secret = 'klhppqo7oLptclnKbyYxcf5ZaSWnYQ'
 client_id = 'NshKC-eP4HnQuF_wNzQNGA'
 user_agent='Stocks'
-list_of_reddits = ['wallstreetbets','stocks','pennystocks','DueDiligence','smallstreetbets','shroomstocks','traders',\
-                   'SPACs','ValueInvesting','UndervaluedStonks','investing','SecurityAnalysis',\
-                   'Wallstreetbetsnew','UnderValuedStocks','EducatedInvesting','RichTogether',\
-                   'greeninvestor','stonks','investing_discussion','options','StockMarket','InvestmentClub',\
-                   'RobinHood']
+# list_of_reddits = ['wallstreetbets','stocks','pennystocks','DueDiligence','smallstreetbets','shroomstocks','traders',\
+#                    'SPACs','ValueInvesting','UndervaluedStonks','investing','SecurityAnalysis',\
+#                    'Wallstreetbetsnew','UnderValuedStocks','EducatedInvesting','RichTogether',\
+#                    'greeninvestor','stonks','investing_discussion','options','StockMarket','InvestmentClub',\
+#                    'RobinHood']
 
-# list_of_reddits = ['shroomstocks']
+list_of_reddits = ['wallstreetbets','stocks','pennystocks','investing'] #TEST
 
