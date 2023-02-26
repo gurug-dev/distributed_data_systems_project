@@ -28,7 +28,7 @@ Please note that this is a private repository as of now and access to this repo 
 
 - This repo uses class material given by Dr. Diane Woodbridge as part of the MSDS 697 course (part of USFCA MSDS curriculum) for setting up base function utilities as well as environment yaml files.
 
-- This repo (as of this current state) relies heavily on the edgar api crawler repo available at this location: https://github.com/nlpaueb/edgar-crawler
+- This repo (as of this current state) relies heavily on the edgar api crawler repo available at this location: https://github.com/nlpaueb/edgar-crawler . The base of this repo was formed using this repo available at: https://github.com/nlpaueb/edgar-crawler
 
 
 The citation bibtex required by the github is present below:
