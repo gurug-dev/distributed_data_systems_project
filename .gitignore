@@ -5,6 +5,9 @@ __pycache__/*
 sf_law_enforcement_calls.py
 weather_data_calls.py
 
+# Drafts
+draft.ipynb
+
 # Datasets
 datasets/
 
