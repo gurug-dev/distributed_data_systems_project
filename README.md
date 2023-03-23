@@ -1,7 +1,6 @@
-# Sentiment Analysis and Stock Price Prediction using Knowledge Graphs
+# Sentiment Analysis and Stock Price Prediction using HuggingFace and SparkML
 This is a group project part of which goes on towards satisfying requirements for course project in the Distributed Data Systems course, MSDS 697, as part of the University of San Francisco, MSDS Program. 
 
-Please note that this is a private repository as of now and access to this repo is limited to the group members and the course instructor and grader. 
 
 ## Team Members
 - Gurusankar Gopalakrishnan
@@ -12,12 +11,10 @@ Please note that this is a private repository as of now and access to this repo 
 
 ## ML Objectives:
 
-1. Performing Sentiment Analysis using Pre-trained Models (Hugging Face- FinBERT)
-2. Use sentiment analysis to predict Stock Prices
-3. Build Knowledge Graph for US Publicly listed firms
-4. Perform Community Detection/ Link Prediction to identify knowledge graph embeddings
-5. Use Graph Data Science to augment sentiment scores for related/smaller firms and use them to improve stock market predictions
-
+1. Scrape reddit posts, financial 10K reports and stock ticker price data using PRAW, PMAW, EDGAR - API, and AlphaVantage.
+2. Automate the data pipeline using PySpark, Airflow, MongoDB and GCS.
+3. Performing Sentiment Analysis using Pre-trained Models (Hugging Face- FinBERT) on the reddit posts and financial 10K reports.
+4. Use sentiment scores and ticker features like EBITDA, 52wk high/lows etc to predict Stock Prices.
 
 
 ## Install
@@ -25,10 +22,10 @@ Please note that this is a private repository as of now and access to this repo 
 
 
 ## Citation
-- This repo (as of this current state) relies heavily on the edgar api crawler repo available at this location: https://github.com/nlpaueb/edgar-crawler . The base of this repo was formed using this repo available at: https://github.com/nlpaueb/edgar-crawler
+- This repo relies on the edgar api crawler repo available at this location: https://github.com/nlpaueb/edgar-crawler . 
 
 
-The citation bibtex required by the github is present below:
+The citation bibtex is as below:
 
 ```
 @inproceedings{loukas-etal-2021-edgar,
